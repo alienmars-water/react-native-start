@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* reactNativeStartTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* reactNativeStartTests.m */; };
 		091D554A7766EBA46F0F8B0D /* libPods-reactNativeStartTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2775B4D1D1630443B240B3FC /* libPods-reactNativeStartTests.a */; };
@@ -20,6 +19,10 @@
 		2DCD954D1E0B4F2C00145EB5 /* reactNativeStartTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* reactNativeStartTests.m */; };
 		779A9642EF91736C8E13F758 /* libPods-reactNativeStart.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9756B19C5B80E668F5022AE2 /* libPods-reactNativeStart.a */; };
 		C66110A9E1C09F25BE4BC98B /* libPods-reactNativeStart-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09122A323DDDBF07C4173B6E /* libPods-reactNativeStart-tvOS.a */; };
+		ADF19BC0F1694B52ADC065E7 /* Agenda-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18BB9132AFA74D2AAEAFEF81 /* Agenda-Bold.ttf */; };
+		1029582A3924407485591688 /* Agenda-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ADEB24AC6AB04201BAA7B4ED /* Agenda-Light.ttf */; };
+		FBF90DE72E064994A34424D8 /* Agenda-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 204AA4F5742D41A280C70DF5 /* Agenda-Regular.ttf */; };
+		6E70C6D2F67242EDAF268E02 /* Agenda-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6730A4F75E1E489EA1D2767C /* Agenda-Semibold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,10 @@
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		F1EDCDD904A6F36D84FBC000 /* Pods-reactNativeStartTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactNativeStartTests.debug.xcconfig"; path = "Target Support Files/Pods-reactNativeStartTests/Pods-reactNativeStartTests.debug.xcconfig"; sourceTree = "<group>"; };
+		18BB9132AFA74D2AAEAFEF81 /* Agenda-Bold.ttf */ = {isa = PBXFileReference; name = "Agenda-Bold.ttf"; path = "../assets/fonts/Agenda-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		ADEB24AC6AB04201BAA7B4ED /* Agenda-Light.ttf */ = {isa = PBXFileReference; name = "Agenda-Light.ttf"; path = "../assets/fonts/Agenda-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		204AA4F5742D41A280C70DF5 /* Agenda-Regular.ttf */ = {isa = PBXFileReference; name = "Agenda-Regular.ttf"; path = "../assets/fonts/Agenda-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6730A4F75E1E489EA1D2767C /* Agenda-Semibold.ttf */ = {isa = PBXFileReference; name = "Agenda-Semibold.ttf"; path = "../assets/fonts/Agenda-Semibold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +188,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				5F9D3412B96181349F28BD67 /* Pods */,
+				DFCC8F9B5C6E47708C575AB6 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -197,6 +205,18 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		DFCC8F9B5C6E47708C575AB6 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				18BB9132AFA74D2AAEAFEF81 /* Agenda-Bold.ttf */,
+				ADEB24AC6AB04201BAA7B4ED /* Agenda-Light.ttf */,
+				204AA4F5742D41A280C70DF5 /* Agenda-Regular.ttf */,
+				6730A4F75E1E489EA1D2767C /* Agenda-Semibold.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -285,7 +305,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 940;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -338,6 +358,10 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				ADF19BC0F1694B52ADC065E7 /* Agenda-Bold.ttf in Resources */,
+				1029582A3924407485591688 /* Agenda-Light.ttf in Resources */,
+				FBF90DE72E064994A34424D8 /* Agenda-Regular.ttf in Resources */,
+				6E70C6D2F67242EDAF268E02 /* Agenda-Semibold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

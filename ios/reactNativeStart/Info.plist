@@ -38,7 +38,7 @@
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -53,5 +53,12 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Agenda-Bold.ttf</string>
+		<string>Agenda-Light.ttf</string>
+		<string>Agenda-Regular.ttf</string>
+		<string>Agenda-Semibold.ttf</string>
+	</array>
 </dict>
 </plist>
