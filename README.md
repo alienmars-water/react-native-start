@@ -7,3 +7,6 @@ Leaning React Native step by step
     b) copy xxx.ttf into /fonts folder
     c) set "assets" path in package.json
     d) react-native link
+
+2. support multi-language
+    https://github.com/AlexanderZaytsev/react-native-i18n 
