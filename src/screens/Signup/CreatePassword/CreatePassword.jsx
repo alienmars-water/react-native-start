@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, View, ScrollView } from 'react-native'
+import { Text, View } from 'react-native'
+
+import styles from './CreatePassword.styles'
 
 export default class CreatePassword extends Component {
     render() {
@@ -18,22 +20,3 @@ export default class CreatePassword extends Component {
         )
     }
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        flexDirection: 'row',
-        // justifyContent: 'center',
-        alignItems: 'flex-start',
-        // backgroundColor: 'black',
-        // paddingTop: 50,
-        // alignContent: 'center',
-        // flexWrap: 'wrap',
-        // flexShrink:50
-    },
-    box: {
-        height: 100,
-        width: 100,
-        position: 'absolute'
-    }
-})

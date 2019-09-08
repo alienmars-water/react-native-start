@@ -9,4 +9,10 @@ Leaning React Native step by step
     d) react-native link
 
 2. support multi-language
-    https://github.com/AlexanderZaytsev/react-native-i18n 
+    a) https://github.com/AlexanderZaytsev/react-native-i18n 
+    b) pod install for iOS
+
+3. Jest & Enzyme
+    a) config "transform" to support jsx
+    b) enzyme-adapter-react-16 has dependency on react-dom
+    c) expect cheatsheet: https://devhints.io/expectjs

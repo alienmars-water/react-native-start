@@ -10,8 +10,8 @@ export default class CreateUserNameScreen extends React.Component {
     render() {    
         return (
             <View style={styles.container}>
-                <Text>{content.english}</Text>
-                <Text>{content.chinese}</Text>
+                <Text testID="en">{content.english}</Text>
+                <Text testID="zh">{content.chinese}</Text>
             </View>
         )
     }
