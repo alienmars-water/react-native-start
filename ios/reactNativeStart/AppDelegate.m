@@ -27,7 +27,24 @@
   rootViewController.view = rootView;
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
+
+  // Register for push notifications 
+  if ([[UIApplication sharedApplication]currentUserNotificationSettings].types != UIUserNotificationTypeNone) 
+  {
+    // [self addLocalNotification];
+  } else {
+    [[UIApplication sharedApplication]registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound  categories:nil]];
+  }
+
   return YES;
+}
+
+-(void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings 
+{
+    if (notificationSettings.types != UIUserNotificationTypeNone) 
+    {
+      // [self addLocalNotification];
+    }
 }
 
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge
