@@ -1,4 +1,4 @@
-import CreateUserNameScreen from './CreateUserName';
+import CreateUserName from './CreateUserName'
 import CreatePassword from './CreatePassword'
 
-export { CreateUserNameScreen, CreatePassword };
+export { CreateUserName, CreatePassword }

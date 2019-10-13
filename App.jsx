@@ -6,7 +6,7 @@
  * @flow
  */
 
-import React, {Fragment} from 'react';
+import React, { Fragment } from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -24,52 +24,59 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import { CreateUserName, CreatePassword } from './src/screens/Signup'
+import { Homepage } from './src/screens/MyInfo'
+
 const App = () => {
-  return (
-    <Fragment>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
-          </View>
-        </ScrollView>
-      </SafeAreaView>
-    </Fragment>
-  );
+  return <Homepage />
+  // <View>
+  //   <Text>abc</Text>
+  // </View>
+  // return (
+  //   <Fragment>
+  //     <StatusBar barStyle="dark-content" />
+  //     <SafeAreaView>
+  //       <ScrollView
+  //         contentInsetAdjustmentBehavior="automatic"
+  //         style={styles.scrollView}>
+  //         <Header />
+  //         {global.HermesInternal == null ? null : (
+  //           <View style={styles.engine}>
+  //             <Text style={styles.footer}>Engine: Hermes</Text>
+  //           </View>
+  //         )}
+  //         <View style={styles.body}>
+  //           <View style={styles.sectionContainer}>
+  //             <Text style={styles.sectionTitle}>Step One</Text>
+  //             <Text style={styles.sectionDescription}>
+  //               Edit <Text style={styles.highlight}>App.js</Text> to change this
+  //               screen and then come back to see your edits.
+  //             </Text>
+  //           </View>
+  //           <View style={styles.sectionContainer}>
+  //             <Text style={styles.sectionTitle}>See Your Changes</Text>
+  //             <Text style={styles.sectionDescription}>
+  //               <ReloadInstructions />
+  //             </Text>
+  //           </View>
+  //           <View style={styles.sectionContainer}>
+  //             <Text style={styles.sectionTitle}>Debug</Text>
+  //             <Text style={styles.sectionDescription}>
+  //               <DebugInstructions />
+  //             </Text>
+  //           </View>
+  //           <View style={styles.sectionContainer}>
+  //             <Text style={styles.sectionTitle}>Learn More</Text>
+  //             <Text style={styles.sectionDescription}>
+  //               Read the docs to discover what to do next:
+  //             </Text>
+  //           </View>
+  //           <LearnMoreLinks />
+  //         </View>
+  //       </ScrollView>
+  //     </SafeAreaView>
+  //   </Fragment>
+  // );
 };
 
 const styles = StyleSheet.create({
@@ -91,12 +98,14 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: '600',
     color: Colors.black,
+    fontFamily: 'Agenda-Semibold'
   },
   sectionDescription: {
     marginTop: 8,
     fontSize: 18,
     fontWeight: '400',
     color: Colors.dark,
+    fontFamily: 'Agenda-Semibold'
   },
   highlight: {
     fontWeight: '700',

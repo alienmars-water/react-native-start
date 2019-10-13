@@ -16,3 +16,6 @@ Leaning React Native step by step
     a) config "transform" to support jsx
     b) enzyme-adapter-react-16 has dependency on react-dom
     c) expect cheatsheet: https://devhints.io/expectjs
+
+4. support webview
+    a) https://github.com/react-native-community/react-native-webview/blob/master/docs/Getting-Started.md
