@@ -26,9 +26,10 @@ import {
 
 import { CreateUserName, CreatePassword } from './src/screens/Signup'
 import { Homepage } from './src/screens/MyInfo'
+import { Robot } from './src/screens/Robot'
 
 const App = () => {
-  return <Homepage />
+  return <Robot />
   // <View>
   //   <Text>abc</Text>
   // </View>
