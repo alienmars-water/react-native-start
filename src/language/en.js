@@ -1,7 +1,7 @@
 export default {
     signup: {
         createUserName: {
-            english: 'english',
+            english: 'english123455555',
             chinese: 'chinese'
         }
     }

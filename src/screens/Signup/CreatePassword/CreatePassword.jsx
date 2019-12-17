@@ -3,7 +3,7 @@ import { Text, View } from 'react-native'
 
 import styles from './CreatePassword.styles'
 
-export default class CreatePassword extends Component {
+export default class Flexboxes extends Component {
     render() {
         return (
             <View style={styles.container}>

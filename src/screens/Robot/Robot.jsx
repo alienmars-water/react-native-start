@@ -1,53 +1,94 @@
-import React, { Component } from 'react'
-import { Text, View, Image, Picker } from 'react-native'
+import React from 'react';
+import {
+    SafeAreaView,
+    TouchableOpacity,
+    TouchableHighlight,
+    FlatList,
+    StyleSheet,
+    View,
+    Text,
+} from 'react-native';
 
-import styles from './Robot.styles'
+let DATA = [
+    {
+        id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
+        title: 'First Item',
+    },
+    {
+        id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
+        title: 'Second Item',
+    },
+    {
+        id: '58694a0f-3da1-471f-bd96-145571e29d72',
+        title: 'Third Item',
+    },
+];
 
-export default class Robot extends Component {
-    constructor(props) {
-        super(props)
+function Item({ id, title, selected, onSelect }) {
+    return (
+        <TouchableOpacity
+            onPress={() => onSelect(id)}
+            style={[
+                styles.item,
+                { backgroundColor: selected ? '#6e3b6e' : '#f9c2ff' },
+            ]}
+        >
+            <Text style={styles.title}>{title}</Text>
+        </TouchableOpacity>
+    );
+}
 
-        this.state = {
-            language: 'js'
-        }
-    }
+export default function App() {
+    const [selected, setSelected] = React.useState(new Map());
 
-    render() {
-        return (
-            <View style={styles.container}>
-                {/* {this.renderRobots()} */}
-                <Picker
-                    mode="dialog"
-                    selectedValue={this.state.language}
-                    style={styles.picker}
-                    onValueChange={(itemValue, itemIndex) =>
-                        this.setState({ language: itemValue })
-                    }>
-                    <Picker.Item label="Java" value="java" />
-                    <Picker.Item label="JavaScript" value="js" />
-                    <Picker.Item label="C" value="c" />
-                    <Picker.Item label="C++" value="c++" />
-                    <Picker.Item label="C#" value="c#" />
-                    <Picker.Item label="VB" value="vb" />
-                    <Picker.Item label="Go" value="go" />
-                    <Picker.Item label="Python" value="phy" />
-                    <Picker.Item label="C#1" value="c#1" />
-                    <Picker.Item label="VB1" value="vb1" />
-                    <Picker.Item label="Go1" value="go1" />
-                    <Picker.Item label="Python1" value="phy1" />
-                </Picker>
-            </View>
-        )
-    }
+    const onSelect = React.useCallback(
+        id => {
+            const newSelected = new Map(selected);
+            newSelected.set(id, !selected.get(id));
 
-    renderRobots() {
-        let arr = []
-        for (let index = 0; index < 24; index++) {
-            arr.push(
-                <Image key={index} source={require("../../../assets/images/Robo-Adviser.gif")} />
-            )
-        }
+            setSelected(newSelected);
+        },
+        [selected],
+    );
 
-        return arr
+    return (
+        <SafeAreaView style={styles.container}>
+            <FlatList
+                ItemSeparatorComponent={({ highlighted }) => (
+                    <View style={[style.separator, highlighted && { marginLeft: 0 }]} />
+                )}
+                data={[{ title: 'Title Text', key: 'item1' }]}
+                renderItem={({ item, index, separators }) => (
+                    <TouchableHighlight
+                        onPress={() => this._onPress(item)}
+                        onShowUnderlay={separators.highlight}
+                        onHideUnderlay={separators.unhighlight}>
+                        <View style={{ backgroundColor: 'white' }}>
+                            <Text>{item.title}</Text>
+                        </View>
+                    </TouchableHighlight>
+                )}
+            />
+        </SafeAreaView>
+    );
+
+    _onPress = (item) => {
+
     }
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        marginTop: 20,
+    },
+    item: {
+        backgroundColor: '#f9c2ff',
+        padding: 20,
+        marginVertical: 8,
+        marginHorizontal: 16,
+    },
+    title: {
+        fontSize: 32,
+    },
+});
