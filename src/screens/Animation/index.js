@@ -1,3 +1,4 @@
 import MovingBox from './MovingBox'
+import ClickSquare from './ClickSquare'
 
-export { MovingBox }
+export { MovingBox, ClickSquare }
