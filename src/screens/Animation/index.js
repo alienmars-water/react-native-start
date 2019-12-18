@@ -1,4 +1,5 @@
 import MovingBox from './MovingBox'
 import ClickSquare from './ClickSquare'
+import ScrollHeader from './ScrollHeader'
 
-export { MovingBox, ClickSquare }
+export { MovingBox, ClickSquare, ScrollHeader }
