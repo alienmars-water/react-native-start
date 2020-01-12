@@ -28,10 +28,10 @@ import { CreateUserName, CreatePassword } from './src/screens/Signup'
 import { Homepage, Authorise } from './src/screens/MyInfo'
 import { Robot } from './src/screens/Robot'
 import { Circles } from './src/screens/Svg'
-import { MovingBox, ClickSquare, ScrollHeader } from './src/screens/Animation'
+import { MovingBox, ClickSquare, ScrollHeader, PathPaint } from './src/screens/Animation'
 
 const App = () => {
-  return <ScrollHeader />
+  return <PathPaint />
 };
 
 const styles = StyleSheet.create({
