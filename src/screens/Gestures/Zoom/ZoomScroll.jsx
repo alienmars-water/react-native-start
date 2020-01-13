@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Text, View, ScrollView, Animated } from 'react-native'
+import Svg, { Circle, Rect, } from 'react-native-svg';
 
 export default class ZoomScroll extends Component {
     constructor(props) {
@@ -11,10 +12,11 @@ export default class ZoomScroll extends Component {
             data.push(element)
         }
 
-        this.state = { 
+        this.state = {
             data,
-            scrollX: new Animated.Value(0)
-         }
+            scrollX: new Animated.Value(0),
+            colors: ['red', 'grey', 'pink', 'yellow']
+        }
     }
 
 
@@ -22,19 +24,10 @@ export default class ZoomScroll extends Component {
         return (
             <ScrollView
                 horizontal={true}
-                style={{marginTop: 50}}
-                onScroll={Animated.event(
-                    // scrollX = e.nativeEvent.contentOffset.x
-                    [{
-                        nativeEvent: {
-                            contentOffset: {
-                                x: this.state.scrollX
-                            }
-                        }
-                    }]
-                )}
+                style={{ marginTop: 50 }}
             >
-                {this.renderItems()}
+                {/* {this.renderItems()} */}
+                {this.renderSVGs()}
             </ScrollView>
         )
     }
@@ -43,6 +36,26 @@ export default class ZoomScroll extends Component {
         const result = this.state.data.map((item, index) => (
             <View key={index} style={{ margin: 20 }}>
                 <Text style={{ fontSize: 20, color: 'grey' }}>{item}</Text>
+            </View>
+        ))
+
+        return result
+    }
+
+    renderSVGs() {
+        const result = this.state.colors.map((item, index) => (
+            <View key={index} style={{width: 1000}}>
+                <Svg height="50%" width="100%" viewBox="0 0 100 100">
+                    <Rect
+                        x="0"
+                        y="15"
+                        width="1000"
+                        height="100"
+                        stroke="red"
+                        strokeWidth="2"
+                        fill={item}
+                    />
+                </Svg>
             </View>
         ))
 

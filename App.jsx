@@ -33,7 +33,7 @@ import { DragingBall, ZoomScroll} from './src/screens/Gestures'
 
 
 const App = () => {
-  return <DragingBall />
+  return <ZoomScroll />
 };
 
 const styles = StyleSheet.create({
