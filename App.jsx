@@ -29,9 +29,11 @@ import { Homepage, Authorise } from './src/screens/MyInfo'
 import { Robot } from './src/screens/Robot'
 import { Circles } from './src/screens/Svg'
 import { MovingBox, ClickSquare, ScrollHeader, PathPaint } from './src/screens/Animation'
+import { DragingBall, ZoomScroll} from './src/screens/Gestures'
+
 
 const App = () => {
-  return <PathPaint />
+  return <DragingBall />
 };
 
 const styles = StyleSheet.create({
